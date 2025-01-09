@@ -1,0 +1,249 @@
+.myn-icon
+{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.myn-feature-img
+{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    max-height: 250px; /* Optional: restrict maximum height */
+}
+
+.myn-thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    max-height: 350px; /* Optional: restrict maximum height */
+}
+
+.page-header-margin
+{
+    margin-top: -35px;
+}
+
+@media only screen and (max-width: 768px) {
+    .w-25 {
+        width: 75% !important;
+    }
+    .w-sm-100
+    {
+        width: 100% !important;
+    }
+    .w-sm-50
+    {
+        width: 50% !important;
+    }
+    .page-header-margin
+    {
+        margin-top:0px;
+    }
+}
+
+.col-container {
+    display: table; /* Make the container element behave like a table */
+    width: 100%; /* Set full-width to expand the whole page */
+}
+
+.col-cell {
+    display: table-cell; /* Make elements inside the container behave like table cells */
+}
+
+.paragraph
+{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.gradient-bg
+{
+    background: linear-gradient(180deg, rgba(205, 220, 236, 0.50) 0%, rgba(36, 67, 104, 0.50) 100%);
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.team
+{
+    height: 200px;
+}
+
+.c-primary
+{
+    color: #FFB703;
+}
+
+/*NAV TABS HOMES*/
+.home-nav-tabs {
+    --bs-nav-tabs-border-width: var(--bs-border-width);
+    --bs-nav-tabs-border-color: var(--bs-border-color);
+    --bs-nav-tabs-border-radius: var(--bs-border-radius);
+    --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+    --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+    --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+    --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+}
+.home-nav-tabs .nav-link {
+    color: var(--bs-white);
+    background-color: var(--bs-secondary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.home-nav-tabs .nav-link:hover, .home-nav-tabs .nav-link:focus {
+    isolation: isolate;
+}
+.home-nav-tabs .nav-link.disabled, .home-nav-tabs .nav-link:disabled {
+    color: var(--bs-nav-link-disabled-color);
+    background-color: transparent;
+    border-color: transparent;
+}
+.home-nav-tabs .nav-link.active,
+.home-nav-tabs .nav-item.show .nav-link {
+    color: var(--bs-black);
+    background-color: #FFFFFF;
+}
+
+.home-nav-tabs .dropdown-menu {
+    margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/*HOME*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+}
+
+.overlay-text {
+    z-index: 2; /* Ensures text is above the overlay */
+}
+
+.top-search-form .form-control {
+    color: white;
+}
+
+.myn-form .form-control {
+    --cnvs-input-btn-input-bg: var(--cnvs-contrast-200) !important;
+    --cnvs-input-btn-input-color: var(--cnvs-contrast-1000) !important;
+    --cnvs-input-focus-color: var(--cnvs-input-btn-input-color) !important;
+}
+
+.myn-form .form-select {
+    background-color: var(--cnvs-contrast-200) !important;
+}
+
+.line-between {
+    width: 70%;
+    height: 11px;
+    background-color: #FFB703;
+}
+
+
+
+/*OWL Carousal*/
+
+
+.owl-nav button {
+    width: 60px !important; /* Adjust as needed */
+    height: 60px !important; /* Adjust as needed */
+    padding: 10px;
+}
+
+@media (min-width: 1024px) {
+    /* Adjust the min-width value as needed for desktop */
+    .owl-nav button {
+        margin: -30px;
+    }
+
+    .owl-carousel .owl-nav [class*=owl-] {
+        margin-top: -60px;
+    }
+
+}
+
+.owl-nav button span {
+    font-size: 36px !important;
+}
+
+/*Timeline*/
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Horizontal line behind the steps */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ccc;
+    z-index: 0;
+}
+
+.timeline-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Circle for each step */
+.timeline-step .box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+/* Active step with yellow background */
+.timeline-step.active .box {
+    background-color: #FFB703;
+    border-color: #FFB703;
+}
+
+/* Yellow text for active step */
+.timeline-step.active span {
+    color: #FFB703;
+}
+
+/* Spacing adjustment for longer text */
+.timeline-step p {
+    max-width: 150px; /* Adjust depending on the text length */
+}
+
+.testimonial-card {
+    height: 350px; /* Adjust this value as needed */
+    overflow: hidden; /* To hide any overflow text */
+}
+
+.testimonial-card-home {
+    height: 300px; /* Adjust this value as needed */
+    overflow: hidden; /* To hide any overflow text */
+}
