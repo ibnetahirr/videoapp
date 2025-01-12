@@ -75,7 +75,7 @@
                 <div class="row" id="videoGrid">
                     <!-- Video Card 1 -->
                     @foreach($videos AS $item)
-                        <div class="col-md-6 mb-4 video-item">
+                        <div class="col-md-12 mb-4 video-item">
                             <div class="card">
                                 <div class="video-container">
                                     <video controls>

@@ -5,32 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .sidebar {
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
-            background-color: #343a40;
-        }
-        .sidebar a {
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #495057;
-        }
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        .navbar {
-            margin-left: 250px;
-        }
-    </style>
 </head>
 <body>
 
@@ -43,7 +17,7 @@
 <div class="content">
 
     <div class="container mt-4">
-        <h4>Create New Creator Account</h4>
+        <h4>Create Creator Account</h4>
         <form method="POST" action="{{ route('manual') }}">
             @csrf
 
@@ -113,26 +87,15 @@
             </div>
         </form>
         <hr>
-        <h4>Existing Creators</h4>
+        <h4>Available Creators</h4>
         @if(is_object($creators) && $creators->isNotEmpty() || is_array($creators) && count($creators) > 0)
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                <ul>
                         @foreach($creators AS $item)
-                            <tr>
-                                <td>{{$item->name}}</td>
-                                <td>{{$item->email}}</td>
-                            </tr>
+                            <li>
+                                {{$item->name}} | {{$item->email}}
+                            </li>
                         @endforeach
-
-
-                    </tbody>
-                  </table>
+                </ul>
         @else
             <h6 class="text-bg-danger p-1 text-white">Oops ! No creators available.</h6>
 
